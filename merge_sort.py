@@ -24,7 +24,7 @@ def merge( seg1, seg2 ):
         del seg1[0]
     return joined
 
-def split( _list ):
+def sort( _list ):
     print("unsorted: ", _list)
     seg1 = []
     seg2 = []
@@ -38,16 +38,16 @@ def split( _list ):
 
 
     if len(seg1) > 1:
-        seg1 = split( seg1 )
+        seg1 = sort( seg1 )
     if len(seg2) > 1:
-        seg2 = split( seg2 )
+        seg2 = sort( seg2 )
 
     merged = merge( seg1, seg2)
     # print( "merged: ", merged)
     return merged
 
 # sortedList_short = split( unsortedList_short)
-sortedList = split( unsortedList)
+sortedList = sort( unsortedList)
 
 # print("sortedList_short: ", sortedList_short)
 print("sortedList: ", sortedList)
